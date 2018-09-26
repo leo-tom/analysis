@@ -18,7 +18,7 @@
 <h2>Concept of numbers</h2>
 <p>
 Assume that basic concept of numbers such as 4 arithmetic operations are already known. At first few chapters, we only
-deal with real numbers. Therefore, no specification would be given. Let's assume that following terms are already known.
+deal with real numbers. Therefore, no specification would be given for it. Let's assume that following terms are already known.
 <table style="margin: auto;" border="1">
 <tr >
 <td>Natural number</td>
@@ -67,11 +67,48 @@ power of 2.For example,
 <h3>Geometrical representation of numbers</h3>
 <p>
 Analysis uses terms from geometry. For instance, we express real numbers with point on the line using coordinates. We already know the way to do so.
-On the line \(XX'\), point \(O\) which represents 0 is called origin. If point \(E\) represents 1 on line (\OX\), \(OE\) is the unit of the length.
-Generally, point \(P\) represent \(x\) is on \(OX\) or \(OX'\) depending on whether \(x\) is positive or negative.
-
+On the line \(XX'\), point \(O\) which represents \(0\) is called origin. If point \(E\) represents 1 on line \(OX\), \(OE\) is the unit of the length.
+Generally, point \(P\) represent \(x\) is on \(OX\) or \(OX'\) depending on whether \(x\) is positive or negative. Length of \(OP\) is absolute value
+of x, expressed \(|x|\). When real number \(x,x'\) are expressed with point \(P,P'\), \(|x-x'|\) is a length of \(P,P'\). 
 </p>
+<p>
+Following relation of absolute value often get quoted, and is well known.
+\begin{align}
+|x|+|x'| \ge |x+x'| \ge |x| - |x'|. 
+\end{align}
+</p>
+<p>
+When a pair of real numbers \(x,y\) are expressed as \((x,y)\), coordination gives unique relation between each pair \(x,y\) and point \(P\) on plane.
+\((x,y)\) is called \(P\) in this occasion. Usually rectangular coordinate system is used.
+</p>
+<p>
+Similarly, tuple of three real numbers \(x,y,z\) is expressed with a point in the space.
+</p>
+<p>
+Say \(P=(x_1,x_2,...,x_n),P'=(x'_1,x'_2,...,x'_n)\),
+\begin{align*}
+	\sqrt{(x_1 - x'_1)^2 + (x_2 - x'_2)^2 + ... + (x_n - x'_n)^2}
+\end{align*}
+is a length of \(P,P'\), and is called \(PP'\). Then, we get "Triangular relationship" \(PP' + P'P'' \ge PP''\) justified.
+For given \(P\), \(P'\) which satisfies
+\begin{align*}
+PP'^2 = (x_1 -x'_1)^2 + (x_2 - x'_2)^2 + ... + (x_n - x'_n)^2 < \delta^2 
+\end{align*}
+is said that \(P'\) is inside n-dimensional sphere radius of \(\delta\). Also, when
+\begin{align*}
+|x_1 - x'_1| < \delta ,|x_2 - x'_2| < \delta, ... , |x_n - x'_n| < \delta,
+\end{align*}
+in other words,
+\begin{align*}
+Max(|x_1 - x'_1|,...,|x_n - x'_n|) < \delta
+\end{align*}
+is satisfied, \(P'\) is in n-dimensional cube, edge of which is sized \(2\delta\), and are parallel to axes.
+</p>
+<div style="text-align: right;">
+<a href="index.html" >prev</a> <a href="2.html" >next</a><br>
 Copyright (C) 2018 Leo Tomura
+</div>
+
 </body>
 
 </html>
