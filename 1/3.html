@@ -23,7 +23,7 @@
 <p>
 Sets are the all of numbers which matches given specific circumstances. All numbers belongs to set satisfies given circumstances,
 and others which does not satisfies does not belong to it. Any numbers has to be one of these two. Here are the examples of sets.
-<ol>
+<ol style="font-size: small;">
 	<li>Set of all rational numbers. Being qualified to be in it is to be rational number.</li>
 	<li>For given constants \(a,b\), when \(a < b\), set of all \(x\) which is \(a \le x \le b\). This kind of sets are said to be <b>closed interval</b>.</li>
 	<li>For given constants \(a,b\), when \(a < b\), set of all \(x\) which is \(a < x < b\). This kind of sets are said to be <b>open interval</b>.</li>
@@ -37,50 +37,50 @@ When all numbers belong to set \(S\) are all less(or greater) than one number \(
 And M is called <b>upper bound</b>(or <b>lower bound</b>). If \(S\) is both bounded from above and below, then \(S\) is simply called bounded set.
 </p>
 <p>
-There are several of upper bound. and lower bounds for given set \(S\). All numbers greater than one upper bound are also upper bound of \(S\).
+There are much(infinite) upper bounds, and lower bounds for given set \(S\). All numbers greater than one upper bound are also upper bound of \(S\).
 And also any number less than lower bound are also lower bound of its. We are most likely to be interested in upper bounds that is low as it can be
 and lower bounds that is great as it can be. If \(S\) has the maximal number, then that is lowest upper bound of it. If \(S\) have minimal value,
 then that is the highest lower bound of it.
 Now, as following proof suggests, if \(S\) is finite, even if there is no maximal value or minimal value in \(S\), lowest upper bound and greatest
-lower bound of \(S\) always exits. These two are named upper limit and lower limit. These are not always element of \(S\). If \(S\) does not
-have the maximal value, then upper limit of \(S\) does not belong to \(S\).
+lower bound of \(S\) always exits. These two are named <b>supremum</b> and <b>infimum</b>. These are not always element of \(S\). If \(S\) does not
+have the maximal value, then supremum of \(S\) does not belong to \(S\).
 </p>
 <p>
-Again, \(a\), the upper limit of \(S\) is defined as follows.
+Again, \(a\), the supremum of \(S\) is defined as follows.
 <ol>
 	<li>For <b>all</b> \(x \in S \), \(x \le a\)</li>
 	<li>When \( a' < a \), there <b>exists</b> \(x \in S\) that satisfies \(a' < x \).</li>
 </ol>
 </p>
-<p>
-First one is about \(a\) being upper bound of \(S\). Second one denote \(a\) being upper limit of \(S\). We can denote lower limit just by reversing
+<p style="font-size: small;">
+First one is about \(a\) being upper bound of \(S\). Second one denote \(a\) being supremum of \(S\). We can denote infimum just by reversing
 the signs of inequality.
 </p>
-<p>
+<p style="font-size: small;">
 First example shown above is not finite to neither up nor low.
 </p>
-<p>
-Sets defined as second and third examples are both bounded from above and below, \(a\) is the lower limit, \(b\) is the upper limit. 
-For second example, both upper limit and 
-lower limit belongs to set, for third case however, both lower limit and upper limit do not belong to the set. 
+<p style="font-size: small;">
+Sets defined as second and third examples are both bounded from above and below, \(a\) is the infimum, \(b\) is the supremum. 
+For second example, both supremum and 
+infimum belongs to set, for third case however, both infimum and supremum do not belong to the set. 
 </p>
-<p>
-Set in fourth example is finite, but without maximal value or minimal value, \(\sqrt{2}\) is the upper limit, \(-\sqrt{2}\) is the lower limit. 
+<p style="font-size: small;">
+Set in fourth example is finite, but without maximal value or minimal value, \(\sqrt{2}\) is the supremum, \(-\sqrt{2}\) is the infimum. 
 </p>
-<p>
-Set in fifth example is not bounded from above, but is bounded from below, \(\sqrt{2}\) is the lower limit of it.
+<p style="font-size: small;">
+Set in fifth example is not bounded from above, but is bounded from below, \(\sqrt{2}\) is the infimum of it.
 </p>
 <p> 
-Now, as we denoted the definition of upper limit and lower limit, we shall prove the existence of it.
+Now, as we denoted the definition of supremum and infimum, we shall prove the existence of it.
 </p>
 <div class="theorem">
 <h3>Theorem 2 : Weierstrass's theorem</h3>
 <p>
-If set of number \(S\) is bounded from above(or bounded from below), there exists upper limit(or lower limit) of \(S\).
+If set of number \(S\) is bounded from above(or bounded from below), there exists supremum(or infimum) of \(S\).
 </p>
 </div>
 <p>
-First, we prove existence of lower limit supposing \(S\) is lower bounded.
+First, we prove existence of infimum supposing \(S\) is lower bounded.
 </p>
 <p>
 Suppose \(a\) as one of lower bound of \(S\), any number less than \(a\) are also lower bound of \(S\). if we let all numbers which are lower
@@ -99,18 +99,20 @@ that is to say \(x < s\).
 Say \(b\) is a number between \(x\) and \(s\), that is, \(x < b < s\).
 </p>
 <p>
-\(b\) is greater than \(x\) which belongs to \(S\), therefore, \(b\) is not lower bound of \(S\). Thus \(b\) belongs to \(b\), and \(b\) is
+\(b\) is greater than \(x\) which belongs to \(S\), therefore, \(b\) is not lower bound of \(S\). Thus \(b\) belongs to \(B\), and \(b\) is
 smaller than \(s\), this is clearly contradiction.
 </p>
 <p>
 Therefore, \(s\) is not minimal value of \(B\).
 </p>
 <p>
-That is to say, \(s\) is maximal value of \(A\), in other words, lower limit of \(S\).
+That is to say, \(s\) is maximal value of \(A\), in other words, infimum of \(S\).
 </p>
 <p>
-When \(S\) is bounded from above, existence of upper limit is also proved same way.
+When \(S\) is bounded from above, existence of supremum is also proved same way.
+<div style="float:right;">Q.E.D.</div>
 </p>
+<br>
 <div style="text-align: right;">
 <a href="2.html" >prev</a> <a href="4.html" >next</a><br>
 Copyright (C) 2018 Leo Tomura

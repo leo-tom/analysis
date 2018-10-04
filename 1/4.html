@@ -22,8 +22,260 @@
 <h2>Limit of a sequence</h2>
 <p>
 Sequence of numbers are enumerated collection of numbers, usually written as \(a_1,a_2,...,a_n,...\). The each item \(a_n\) indeed is
-the "function" variated by natural number \(n\). For given sequence of number, we denote it as \({a_n}\).
+the "function" variated by natural number \(n\). We denote them \(\{a_n\}\). When \(a_n\)
+approaches to \(\alpha\) as \(n\) increases, we denote it by saying that sequence \(\{a_n\}\) <b>converges to</b> \(\alpha\).
+\(\alpha\) is called the <b>limit</b> of \(a_n\). It is normally denoted as
+\begin{equation}
+	\lim_{n \to \infty} a_n = \alpha
+\end{equation}
+or more simply,
+\begin{equation}
+	n \to \infty, a_n \to \alpha .
+\end{equation}
+More specifically, it is defined as follows.For all positive number \(\varepsilon\), there exists \(n_0\), such that
+\begin{equation}
+n > n_0 , | \alpha - a_n | < \varepsilon .
+\end{equation}
 </p>
+<p>
+When sequence \(\{a_n\}\) converges, limit \(\alpha\) gets uniquely determined. That is clear from definition.
+</p>
+<p>
+For all positive number \(R\), no matter how big it is, if there exists \(n_0\) that is  
+\begin{equation}
+	n > n_0 \Rightarrow a_n > R .
+\end{equation}
+We express it as 
+\begin{equation}
+	\lim_{n \to \infty} a_n = \infty \mbox{ or } a_n \to \infty . 
+\end{equation}
+Also, 
+\begin{equation}
+	\lim_{n \to \infty} a_n = -\infty \mbox{ or } a_n \to -\infty 
+\end{equation}
+are occasionally used.
+</p>
+<p>
+According to definition shown above, even if few items get removed from sequences that converge, if infinite items remains in sequence,
+it converges to same value. More simply,
+<div class="theorem">
+<h3>Theorem 3 : </h3>
+<p>
+Partial sequence of sequence that converges, also converges to same value.
+</p>
+</div>
+</p>
+<p style="font-size: small;">
+Same thing goes, when limit is either \(\infty\) or \(-\infty\). 
+</p>
+<p style="font-size: small;">
+On the contrary, partial sequence of sequence that does not converge could converge. For example, say \(a_n = (-1)^n\),
+partial sequences: \(a_2,a_4,...\) converges to \(1\), \(a_1,a_3,...\) converges to \(-1\).
+</p>
+<p>
+When every absolute value of \(a_n\) does not beyond one number,  \(a_n\) is said to be bounded. Note that bounded sequence of numbers
+does not always converge(For instance, \(a_n = (-1)^n\)). However, converging sequences are always bounded, and their limits are always in their bound.
+That is to say:
+</p>
+<div class="theorem">
+<h3>Theorem 4 : </h3>
+<p>
+When \(a_n \to \alpha\), there exists constant \(M\) that is \(|a_n| < M\). And, \(|\alpha| \le M \).
+</p>
+</div>
+<p>
+For given positive number \(\varepsilon\), from assumption, there exist \(p\), that satisfies :
+\begin{equation}
+	n > p \Rightarrow | \alpha - a_n | < \varepsilon , \mbox{ in other words }, \alpha -\varepsilon < a_n <  \alpha + \varepsilon .
+\end{equation}
+Let \(M\) be maximal number in sequences with \(p + 2\) items :
+\begin{equation}
+	|a_1| , |a_2| , ... , |a_p| , |\alpha - \varepsilon | ,|\alpha + \varepsilon |.
+\end{equation}
+\(|a_n| < M\) gets satisfied for both case \(n \ge p\) and/or \(n < p\). This is first part of the theorem.
+</p>
+<p>
+Secondly, suppose \(a_n \to \alpha , |a_n| < M \). If we suppose \(|\alpha | > M\), then there exists \(M'\) where \(|\alpha | > M' > M\).
+Then \(|\alpha - a_n | > M' - M > 0\). It contradict to \(a_n \to \alpha\). Thus \(|\alpha| \le M\).<div style="text-align:right;">Q.E.D.</div>
+</p>
+<p style="font-size: small;">
+\(|a_n| < M\) does not always mean \(|\alpha | < M\). For instance, \(a_n = a - \frac{1}{n} < 1 , \alpha = 1\).
+</p>
+<p style="font-size: small;">
+Note that when \(a_n \to \alpha\), there exists \(M\) that is, if \(a_n \le M\) for all n, \(\alpha < M \).
+This is going to be used few times in following chapters. Proof can be demonstrated similarly as one from Theorem 4.
+</p>
+<div class="theorem">
+<h3>Theorem 5 : </h3>
+<p>
+If \(\{a_n\},\{b_n\}\) are converging :
+	<ol>
+		<li>\(\lim_{n \to \infty} (a_n + b_n) = \lim_{n \to \infty} a_n + \lim_{n \to \infty} b_n \).</li>
+		<li>\(\lim_{n \to \infty} (a_n - b_n) = \lim_{n \to \infty} a_n - \lim_{n \to \infty} b_n \).</li>
+		<li>\(\lim_{n \to \infty} (a_n b_n) = (\lim_{n \to \infty} a_n) (\lim_{n \to \infty} b_n \)).</li>
+		<li>\(\lim_{n \to \infty} \frac{a_n}{b_n} = \frac{\lim_{n \to \infty} a_n}{\lim_{n \to \infty} b_n } \).</li>
+	</ol> 
+Note that for 4th theorem, \(b_n \ne 0, \lim_{n \to \infty} b_n \ne 0\).
+</p>
+</div>
+<p>
+Let \(a_n \to \alpha, b_n \to \beta\).1st one and 2nd one is clear. Now,
+\begin{equation}
+	\alpha \beta - a_n b_n = (\alpha - a_n)\beta + a_n (\beta - b_n) .
+\end{equation}
+If we let \(M\) be \(|\beta| < M,|a_n| < M\)(from Theorem 4),
+\begin{equation}
+	|\alpha \beta - a_n b_n | \le M (|\alpha - a_n | + |\beta -b_n|) .
+\end{equation}
+For sufficiently large \(n\), right hand side can be as large as we wish. Thus \(a_n b_n \to \alpha \beta\). We get 3rd one proven.
+</p>
+<p>
+It can be made easier to demonstrate 4th theorem by proving
+\begin{equation}
+	\lim_{n \to \infty} \frac{1}{b_n} = \frac{1}{\beta} .
+\end{equation}
+Then we get
+\begin{equation}
+	\lim_{n \to \infty} a_n \cdot \frac{1}{b_n} = \alpha \frac{1}{\beta}
+\end{equation}
+from 3rd theorem. And this is exactly what 4th theorem is. Now,
+\begin{equation}
+	\frac{1}{\beta} - \frac{1}{b_n} = \frac{b_n - \beta}{\beta b_n} .
+\end{equation}
+From assumption, \(|\beta| > 0\). And because \(b_n \to \beta\), for sufficiently large \(n\), \(|b_n| > \frac{1}{2}|\beta|\), thus
+\begin{equation}
+	|\frac{1}{\beta} - \frac{1}{b_n}| \le \frac{2|b_n - \beta|}{|\beta|^2}.
+\end{equation}
+For sufficiently large \(n\), right hand side gets as small as we wish, thus left hand side can too. Now, we get 4th theorem proven.
+<div style="text-align:right;">Q.E.D.</div>
+</p>
+<p>
+We supposed that sequences in Theorem 3,4,5 are converging. We will consider the way to distinguish whether given sequence is converging or not later
+section. For now, we shall consider only for monotonic sequences.
+</p>
+<p>
+When sequence \(\{a_n\}\) is said to be monotonically increasing, \{a_n\} satisfies:
+\begin{equation}
+	a_1 < a_2 < a_3 < ... < a_n < ... \mbox{.}
+\end{equation}
+If this sequence is bounded, there exists \(M\) which is \(a_n < M\) for all \(n\). That is, set all of \(\{a_n\}\) is bounded.
+Now, if we let \(\alpha\) be supremum of it(Theorem 2), \(\alpha\) also is limit of \(\{a_n\}\).That is because if we suppose \(\alpha' < \alpha\),
+there exists \(a_p\) that is \(a' \le a_p \le \alpha\) from definition of supremum, but because sequence is increasing, when \(n > p\), \(\alpha' < a_n\).
+Therefore, because \(a_n \le \alpha\) for all \(n\), when \(n > p\), \(\alpha' < a_n \le \alpha\), thus \(|\alpha - a_n| < \alpha - \alpha'\).
+Because we supposed \(\alpha'\) as arbitrary number less than \(\alpha\), \(a_n \to \alpha\). Of course \(\alpha \le M\).
+</p>
+<p>
+We can extend it as \(a_1 \le a_2 \le ... \le a_n \le ...\), and it goes same.
+</p>
+<p style="font-size: small;">
+By saying so, we can get sequences which is \(a_p = a_{p+1} = ... = a_p = ...\) from appropriate \(p\). In this cases, these are the limits of these. 
+</p>
+<p>
+It goes same for monotonically decreasing sequences. By generalizing it, we get :
+<div class="theorem">
+<h3>Theorem 6 : </h3>
+	All bounded monotonic sequences converge.
+</div>
+</p>
+<p>
+It is clear that when given monotonic sequence is not bounded, if it is increasing, \(a_n \to \infty\), if it is decreasing, \(a_n \to -\infty\).
+</p>
+<p>
+Followings are the examples.
+</p>
+<p>
+For all \(a > 0\), \(\lim_{n \to \infty} \sqrt[n]{a} = 1\).
+</p>
+<p>
+<ol>
+	<li>Suppose \(a > 1\). Then, \(\sqrt[n]{a} > 1\). And, \(\sqrt[n]{a} > \sqrt[n+1]{a}\). Thus, \(\{a_n\}\) is monotonically decreasing, and 
+		 \(1\) is one of lower bound. Therefore, it has infimum that is \(\alpha \le 1\). If we suppose \(\alpha > 1\), for \(h\) that is \(\alpha -1>h>0\),
+		 \(\alpha > 1 + h\). That means \(\sqrt[n]{a} > 1 + h\), therefore \(a > (1+h)^n > n h \). 
+		 Because right hand side increases as \(n\) increases, that is irrational. Thus \(\alpha = 1\).
+	</li>
+	<li>Suppose \(a < 1\), then \(a' = \frac{1}{a}>1\). Therefore \(\sqrt[n]{a'} \to 1\), thus \(\sqrt[n]{a} \to 1\)(from 4th theorem in Theorem 5).</li>
+	<li>It is clear when \(a = 1\).</li>
+</ol>
+<div style="float:right;">Q.E.D.</div>
+</p>
+<p>
+If \(a > 1,k > 0\), when \(n\to \infty\), \(\frac{a^n}{n^k} \to \infty\).
+</p>
+<p>
+<ol>
+	<li>Suppose \(k = 1\). If we let \(a = 1 + h\), \(h > 0\). That is :
+		\begin{equation}
+			a^n = (1+h)^n = 1 + n h + \frac{n(n-1)}{2}h^2 + ... > \frac{n(n-1)}{2} h^2 , \\
+			\frac{a^n}{n} = \frac{(1+h)^n}{n} > (n-1)\frac{h^2}{2}.
+		\end{equation}	
+		Thus, when \(n \to \infty\), the third side increases without bound. Therefore \(\frac{a_n}{n} \to \infty\).
+	</li>
+	<li>
+		Suppose \(k < 1\). From \(\frac{a^n}{n^k} > \frac{a^n}{n} (n > 1)\), it is clear.	
+	</li>
+	<li>
+		Suppose \(k > 1\). From \(a > 1\), \(a^{\frac{1}{k}} > 1\). Therefore, from what we proved 1st, for arbitrary chosen \(M > 1\),
+		with sufficiently large \(n\),
+		\begin{equation}
+			\frac{(a^{\frac{1}{k}})^n}{n} > M \mbox{, that is : } \frac{a^n}{n^k} = (\frac{(a^{\frac{1}{k}})^n}{n})^k > M^k > M.
+		\end{equation}
+		Thus \(\frac{a^n}{n^k} \to \infty\).
+	</li>
+</ol>
+<div style="float:right;">Q.E.D.</div>
+</p>
+<p> If \(a > 0\), \(\lim_{n\to\infty} \frac{a^n}{n!} = 0\)</p>
+<p>
+Let \(C = \frac{a^k}{k!}\) with arbitrary natural number \(k = 2 a\). When \(n > k\), 
+\begin{equation}
+\frac{a^n}{n!} = C \frac{a}{k+1}\frac{a}{k+2} \cdot \cdot \cdot \frac{a}{n} < \frac{C}{2^{n-k}} = \frac{C \cdot 2^k}{2^n} < \frac{C \cdot 2^k}{n} .
+\end{equation}
+Additionally, if we say \(n > \frac{C \cdot 2^k}{\varepsilon}\), \(\frac{a^n}{n!} < \varepsilon \). 
+<div style="float:right;">Q.E.D.</div>
+</p>
+<p>If \(a_n \to \alpha\), \(\frac{a_1 + a_2 + ... + a_n}{n} \to \alpha\).</p>
+<p>
+Let \(a_n = \alpha + b_n\), then \(b_n \to 0\). In that case,
+\begin{equation}
+	\frac{a_1 + a_2 + ... + a_n}{n} = \alpha + \frac{b_1 + b_2 + ... + b_n}{n},
+\end{equation}
+Therefore, we get it proved by demonstrating : 
+\begin{equation}
+	\frac{b_1 + b_2 + ... + b_n}{n} \to 0 .
+\end{equation}
+Now, say \(\varepsilon \to 0\), from the assumption, there exists \(k\) which is for all \(n\) greater than \(k\), \(|b_n| < \varepsilon\).
+Say \(A\) is the greatest number in \(|b_1|,|b_2|,...,|b_k|\), when \(n > k\),
+\begin{equation}
+	|\frac{b_1 + b_2 + ... + b_n}{n}| < \frac{A k + \varepsilon (n - k)}{n} < \frac{A k}{n} + \varepsilon .
+\end{equation}
+With sufficiently large \(n\), by letting \(\frac{a k}{n} \) smaller than \(\varepsilon\), 
+\begin{equation}
+	|\frac{b_1 + b_2 + ... + b_n}{n}| < 2 \varepsilon .
+\end{equation}
+\(\varepsilon \) is arbitrary chosen, then it converges to \(0\).
+<div style="float:right;">Q.E.D.</div>
+</p>
+<p>(Definition of \(e\))</p>
+<p>
+Say
+\begin{equation}
+	a_n = (1 + \frac{1}{n})^n ,
+\end{equation}
+from binomial theorem,
+\begin{align}
+	a_n &= 1 + \frac{n}{1!} \frac{1}{n} + \frac{n(n-1)}{2!}\frac{1}{n^2} + \frac{n(n-1)(n-2)}{3!}\frac{1}{n^3} + ... + \frac{1}{n^n} \\
+		 &= 1 + 1 + \frac{1 - \frac{1}{n}}{2!} + \frac{(1-\frac{1}{n})(1-\frac{2}{n})}{3!} + ... + \frac{(1-\frac{1}{n})\cdot\cdot\cdot(1-\frac{n-1}{n})}{n!} .
+\end{align}
+When \(n+1\), each items of right hand side increase, besides, amount of items increase, thus \(\{a_n\}\) monotonically increases. And, as we can see from equation above,
+\begin{align}
+	a_n &< 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + ... + \frac{1}{n!} \\
+		  &< 1 + 1 + \frac{1}{2} + \frac{1}{2^2} + ... + \frac{1}{2^{n-1}} < 3.
+\end{align}
+Thus \(\{a_n\}\) converges, because it is monotonically increasing, and is bounded. In old mathematics, \(e\) is defined as its limit.
+<div style="float:right;">Q.E.D.</div>
+<br>
+</p>
+
 <div style="text-align: right;">
 <a href="3.html" >prev</a> <a href="5.html">next</a><br>
 Copyright (C) 2018 Leo Tomura
