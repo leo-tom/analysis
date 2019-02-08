@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="copyright" content="(C) Leo Tomura 2018">
+	<style type="text/css">
+		.ALL{
+			width: 60%;
+			margin: auto;
+		}
+		.theorem{
+			border: 1px solid black;
+			margin: 10px;	
+		}
+	</style>
+    <script type="text/javascript" async 
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <title>Nested intervals</title>
+</head>
+<body class="ALL">
+<h2>Nested intervals</h2>
+<div class="theorem">
+<h3>Theorem 7 : </h3>
+<p>
+For closed interval \(I_n = [a_n,b_n](n=1,2,...)\),
+<ol>
+	<li>Every interval \(I_n\) is included in \(I_{n+1}\),</li>
+	<li>With infinitely increasing \(n\), \(b_n - a_n\) diminishes without limit,</li>
+</ol>
+there exists only one point that is common with every \(I_n\).
+</p>
+</div>
+
+<p>
+It is named <b>Nested interval</b> to confirm a number using this theorem.
+</p>
+
+<p>
+From first assumption,
+\begin{equation}
+	a_1 \le a_2 \le ... \le a_m \le ... \le b_n \le ... \le b_2 \le b_1 .
+\end{equation}
+Therefore, both \(\{a_n\}\) and \(\{b_n\}\) are monotonic, and are bounded. Then, from theorem 6, there exists \(\alpha , \beta \) such that
+\begin{equation}
+	\lim a_n = \alpha , \lim b_n = \beta .
+\end{equation}
+Because \(a_n < b_n\) for arbitrary \(m,n\), when \(n \to \infty \), \(\alpha < b_m\). Hence when \(m \to \infty\), \(\alpha \le \beta\).
+</p>
+
+<p>
+From second assumption, for arbitrary \(\epsilon > 0\), there exist \(n\) such that
+\begin{equation}
+	b_n - a_n < \epsilon .
+\end{equation}
+From
+\begin{equation}
+	a_n \le \alpha \le \beta \le b_n ,
+\end{equation}
+we can rewrite it as
+\begin{equation}
+	0 \le \beta - \alpha < \epsilon .
+\end{equation}
+\(epsilon\) is arbitrary chosen, hence \(\alpha = \beta\).
+</p>
+
+<div style="text-align: right;">
+<a href="4.html" >prev</a> <a href="6.html" >next</a><br>
+Copyright (C) 2018 Leo Tomura
+</div>
+</body>
+
+</html>
