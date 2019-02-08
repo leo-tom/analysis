@@ -9,8 +9,12 @@
 			margin: auto;
 		}
 		.theorem{
-			border: 1px solid black;
+			border: 2px solid black;
 			margin: 10px;	
+		}
+		.proof{
+			border: 1px solid black;
+			margin: 12px;		
 		}
 	</style>
     <script type="text/javascript" async 
@@ -23,21 +27,22 @@
 <div class="theorem">
 <h3>Theorem 7 : </h3>
 <p>
-For closed interval \(I_n = [a_n,b_n](n=1,2,...)\),
+ For closed interval \(I_n = [a_n,b_n](n=1,2,...)\),
 <ol>
 	<li>Every interval \(I_n\) is included in \(I_{n+1}\),</li>
 	<li>With infinitely increasing \(n\), \(b_n - a_n\) diminishes without limit,</li>
 </ol>
-there exists only one point that is common with every \(I_n\).
+then there exists only one point that is common with every \(I_n\).
 </p>
 </div>
 
 <p>
-It is named <b>Nested interval</b> to confirm a number using this theorem.
+ It is named <b>Nested interval</b> to confirm a number using this theorem.
 </p>
 
+<div class="proof">
 <p>
-From first assumption,
+ From first assumption,
 \begin{equation}
 	a_1 \le a_2 \le ... \le a_m \le ... \le b_n \le ... \le b_2 \le b_1 .
 \end{equation}
@@ -49,9 +54,9 @@ Because \(a_n < b_n\) for arbitrary \(m,n\), when \(n \to \infty \), \(\alpha < 
 </p>
 
 <p>
-From second assumption, for arbitrary \(\epsilon > 0\), there exist \(n\) such that
+ From second assumption, for arbitrary \(\varepsilon > 0\), there exist \(n\) such that
 \begin{equation}
-	b_n - a_n < \epsilon .
+	b_n - a_n < \varepsilon .
 \end{equation}
 From
 \begin{equation}
@@ -59,9 +64,38 @@ From
 \end{equation}
 we can rewrite it as
 \begin{equation}
-	0 \le \beta - \alpha < \epsilon .
+	0 \le \beta - \alpha < \varepsilon .
 \end{equation}
-\(epsilon\) is arbitrary chosen, hence \(\alpha = \beta\).
+\(varepsilon\) is arbitrary chosen, hence \(\alpha = \beta\).
+</p>
+<p>
+Considering that \(a_n \le \alpha \le b_n\) for arbitrary \(n\), \(\alpha\) belongs to each intervals \(I_n\).
+From second assumption, it is clear that there is no other number that belongs to every intervals except \(\alpha\).
+</p>
+<div style="text-align:right;">Q.E.D.</div>
+</div>
+
+<p style="font-size: small;">
+In this theorem, we defined \(I_n\) as closed interval to make both ends \(a_n , b_n\) of \(I_n\) to be in \(I_n\).
+Note that this assumption is necessary. Because \(\alpha\) does not always belongs to open interval \((a_n,b_n)\),
+the above proof without defining \(I_n\) as closed interval would not work. In fact, if left-hand end(or right-hand end) of interval is 
+always same, then that point is \(\alpha\) itself.
+</p>
+
+<p>
+ We have looked into 4 basic theorems of continuity of real numbers. That are:
+<ol type="I">
+	<li>Dedekind's theorem(Theorem 1)</li>
+	<li>Weierstrass's theorem(Existence of supremum and infimum, Theorem 2)</li>
+	<li>Convergent of bounded monotonic sequences(Theorem 6)</li>
+	<li>Nested intervals(Theorem 7)</li>
+</ol>
+We used I like as axiom to prove II, and used II to prove III, and III to prove IV. But actually, these are all equivalent.
+Meaning that by confirming just one of these, other theorems can be showed by it. To prove it, we simply have to assume IV, and prove 
+I from it.
+<div style="text-align: center;">
+	<img src="image/1-1.png">
+</div>
 </p>
 
 <div style="text-align: right;">
