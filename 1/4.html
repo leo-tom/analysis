@@ -12,6 +12,10 @@
 			border: 1px solid black;
 			margin: 10px;	
 		}
+		.proof{
+			border: 1px solid black;
+			margin: 12px;		
+		}
 	</style>
     <script type="text/javascript" async 
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -41,7 +45,7 @@ n > n_0 , | \alpha - a_n | < \varepsilon .
 When sequence \(\{a_n\}\) converges, limit \(\alpha\) gets uniquely determined. That is clear from definition.
 </p>
 <p>
-For all positive number \(R\), no matter how big it is, if there exists \(n_0\) that is  
+For all positive number \(R\), no matter how big it is, if there exists \(n_0\) such that
 \begin{equation}
 	n > n_0 \Rightarrow a_n > R .
 \end{equation}
@@ -80,9 +84,10 @@ That is to say:
 <div class="theorem">
 <h3>Theorem 4 : </h3>
 <p>
-When \(a_n \to \alpha\), there exists constant \(M\) that is \(|a_n| < M\). And, \(|\alpha| \le M \).
+When \(a_n \to \alpha\), there exists constant \(M\) such that \(|a_n| < M\). And, \(|\alpha| \le M \).
 </p>
 </div>
+<div class="proof">
 <p>
 For given positive number \(\varepsilon\), from assumption, there exist \(p\), that satisfies :
 \begin{equation}
@@ -98,11 +103,12 @@ Let \(M\) be maximal number in sequences with \(p + 2\) items :
 Secondly, suppose \(a_n \to \alpha , |a_n| < M \). If we suppose \(|\alpha | > M\), then there exists \(M'\) where \(|\alpha | > M' > M\).
 Then \(|\alpha - a_n | > M' - M > 0\). It contradict to \(a_n \to \alpha\). Thus \(|\alpha| \le M\).<div style="text-align:right;">Q.E.D.</div>
 </p>
+</div>
 <p style="font-size: small;">
 \(|a_n| < M\) does not always mean \(|\alpha | < M\). For instance, \(a_n = a - \frac{1}{n} < 1 , \alpha = 1\).
 </p>
 <p style="font-size: small;">
-Note that when \(a_n \to \alpha\), there exists \(M\) that is, if \(a_n \le M\) for all n, \(\alpha < M \).
+Note that when \(a_n \to \alpha\), there exists \(M\) such that, if \(a_n \le M\), for all \(n\) \(\alpha < M \).
 This is going to be used few times in following chapters. Proof can be demonstrated similarly as one from Theorem 4.
 </p>
 <div class="theorem">
@@ -118,6 +124,7 @@ If \(\{a_n\},\{b_n\}\) are converging :
 Note that for 4th theorem, \(b_n \ne 0, \lim_{n \to \infty} b_n \ne 0\).
 </p>
 </div>
+<div class="proof">
 <p>
 Let \(a_n \to \alpha, b_n \to \beta\).1st one and 2nd one is clear. Now,
 \begin{equation}
@@ -148,17 +155,18 @@ From assumption, \(|\beta| > 0\). And because \(b_n \to \beta\), for sufficientl
 \end{equation}
 For sufficiently large \(n\), right hand side gets as small as we wish, thus left hand side can too. Now, we get 4th theorem proven.
 <div style="text-align:right;">Q.E.D.</div>
+</div>
 </p>
 <p>
 We supposed that sequences in Theorem 3,4,5 are converging. We will consider the way to distinguish whether given sequence is converging or not later
 section. For now, we shall consider only for monotonic sequences.
 </p>
 <p>
-When sequence \(\{a_n\}\) is said to be monotonically increasing, \{a_n\} satisfies:
+When sequence \(\{a_n\}\) is said to be monotonically increasing, \(\{a_n\}\) satisfies:
 \begin{equation}
 	a_1 < a_2 < a_3 < ... < a_n < ... \mbox{.}
 \end{equation}
-If this sequence is bounded, there exists \(M\) which is \(a_n < M\) for all \(n\). That is, set all of \(\{a_n\}\) is bounded.
+If this sequence is bounded, there exists \(M\) such that \(a_n < M\) for all \(n\). That isto say set all of \(\{a_n\}\) are bounded.
 Now, if we let \(\alpha\) be supremum of it(Theorem 2), \(\alpha\) also is limit of \(\{a_n\}\).That is because if we suppose \(\alpha' < \alpha\),
 there exists \(a_p\) that is \(a' \le a_p \le \alpha\) from definition of supremum, but because sequence is increasing, when \(n > p\), \(\alpha' < a_n\).
 Therefore, because \(a_n \le \alpha\) for all \(n\), when \(n > p\), \(\alpha' < a_n \le \alpha\), thus \(|\alpha - a_n| < \alpha - \alpha'\).
@@ -184,8 +192,9 @@ It is clear that when given monotonic sequence is not bounded, if it is increasi
 Followings are the examples.
 </p>
 <p>
-For all \(a > 0\), \(\lim_{n \to \infty} \sqrt[n]{a} = 1\).
+(E.g. 1) For all \(a > 0\), \(\lim_{n \to \infty} \sqrt[n]{a} = 1\).
 </p>
+<div class="proof">
 <p>
 <ol>
 	<li>Suppose \(a > 1\). Then, \(\sqrt[n]{a} > 1\). And, \(\sqrt[n]{a} > \sqrt[n+1]{a}\). Thus, \(\{a_n\}\) is monotonically decreasing, and 
@@ -198,9 +207,11 @@ For all \(a > 0\), \(\lim_{n \to \infty} \sqrt[n]{a} = 1\).
 </ol>
 <div style="float:right;">Q.E.D.</div>
 </p>
+</div>
 <p>
-If \(a > 1,k > 0\), when \(n\to \infty\), \(\frac{a^n}{n^k} \to \infty\).
+(E.g. 2) If \(a > 1,k > 0\), when \(n\to \infty\), \(\frac{a^n}{n^k} \to \infty\).
 </p>
+<div  class="proof">
 <p>
 <ol>
 	<li>Suppose \(k = 1\). If we let \(a = 1 + h\), \(h > 0\). That is :
@@ -222,18 +233,20 @@ If \(a > 1,k > 0\), when \(n\to \infty\), \(\frac{a^n}{n^k} \to \infty\).
 		Thus \(\frac{a^n}{n^k} \to \infty\).
 	</li>
 </ol>
-<div style="float:right;">Q.E.D.</div>
 </p>
-<p> If \(a > 0\), \(\lim_{n\to\infty} \frac{a^n}{n!} = 0\)</p>
-<p>
+<div style="float:right;">Q.E.D.</div>
+</div>
+<p>(E.g. 3) If \(a > 0\), \(\lim_{n\to\infty} \frac{a^n}{n!} = 0\)</p>
+<p class="proof">
 Let \(C = \frac{a^k}{k!}\) with arbitrary natural number \(k = 2 a\). When \(n > k\), 
 \begin{equation}
 \frac{a^n}{n!} = C \frac{a}{k+1}\frac{a}{k+2} \cdot \cdot \cdot \frac{a}{n} < \frac{C}{2^{n-k}} = \frac{C \cdot 2^k}{2^n} < \frac{C \cdot 2^k}{n} .
 \end{equation}
-Additionally, if we say \(n > \frac{C \cdot 2^k}{\varepsilon}\), \(\frac{a^n}{n!} < \varepsilon \). 
+Additionally, if we say \(n > \frac{C \cdot 2^k}{\varepsilon}\), then \(\frac{a^n}{n!} < \varepsilon \). 
 <div style="float:right;">Q.E.D.</div>
 </p>
 <p>If \(a_n \to \alpha\), \(\frac{a_1 + a_2 + ... + a_n}{n} \to \alpha\).</p>
+<div class="proof">
 <p>
 Let \(a_n = \alpha + b_n\), then \(b_n \to 0\). In that case,
 \begin{equation}
@@ -248,14 +261,16 @@ Say \(A\) is the greatest number in \(|b_1|,|b_2|,...,|b_k|\), when \(n > k\),
 \begin{equation}
 	|\frac{b_1 + b_2 + ... + b_n}{n}| < \frac{A k + \varepsilon (n - k)}{n} < \frac{A k}{n} + \varepsilon .
 \end{equation}
-With sufficiently large \(n\), by letting \(\frac{a k}{n} \) smaller than \(\varepsilon\), 
+With sufficiently large \(n\), by letting \(\frac{a_k}{n} \) smaller than \(\varepsilon\), 
 \begin{equation}
 	|\frac{b_1 + b_2 + ... + b_n}{n}| < 2 \varepsilon .
 \end{equation}
-\(\varepsilon \) is arbitrary chosen, then it converges to \(0\).
+\(\varepsilon \) is arbitrary chosen, therefore it converges to \(0\).
 <div style="float:right;">Q.E.D.</div>
 </p>
+</div>
 <p>(Definition of \(e\))</p>
+<div class="proof">
 <p>
 Say
 \begin{equation}
@@ -275,6 +290,7 @@ Thus \(\{a_n\}\) converges, because it is monotonically increasing, and is bound
 <div style="float:right;">Q.E.D.</div>
 <br>
 </p>
+</div>
 
 <div style="text-align: right;">
 <a href="3.html" >prev</a> <a href="5.html">next</a><br>
