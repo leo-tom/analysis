@@ -110,15 +110,28 @@ Now, we take arbitrary number \(a,b\) from \(A,B\), and name interval \([a,b]\) 
 	a_1 = \frac{a+b}{2}, b_1 = b \mbox{ or } a_1 = a , b_1 = \frac{a+b}{2} ,
 \end{equation}
 we get interval \(I_1 = [a_1,b_1]\) whose left end belongs to \(A\), right end belongs to \(B\). 
-\(I_1 \) be either half-left of \(I_0\) or half-right of \(I\0\), and its size be \(b_2 - a_2 = \frac{1}{2}(b-a)\).
+\(I_1 \) be either half-left of \(I_0\) or half-right of \(I_0\), and its size be \(b_2 - a_2 = \frac{1}{2}(b-a)\).
 By continuing such a process, we get sequence of intervals :
 \begin{equation}
 	I_0 \supset I_1 \supset I_2 \supset ... \supset I_n \supset ... *, \\
 	I_n = [a_n,b_n], b_n - a_n = \frac{1}{2^n}(b-a) .
 \end{equation}
-Notice Theorem 7 can be applied to this sequence, if we take \(s\) which conforms Theorem 7, it has to belong to 
+Notice Theorem 7 can be applied to this sequence, if we take \(s\) which conforms Theorem 7, it has to belong to either upward set or downward set.
+</p>
+<p>
+Let \(s \in A\). If we take \(s'\) where \(s < s'\), there exists \(b_n\) such that \(s < b_n < s'\) since \(b_n \to s\).
+Therefore, \(s'\) belongs to \(B\), that is, \(s\) belongs to \(A\); and all \(s'\) that is greater than \(s'\) all belong to \(B\).
+In other words, \(s\) is the maximum value of \(A\). In this circumstances, \(B\) would not have minimal value.
+If we claim that \(s'\) is \(B\)'s minimum value : \(s < s'\), so there exists \(b_n\) such that \(b_n < s'\). But \(b_n\) belongs to \(B\), 
+so, that is contradiction.
+</p>
+<p>
+If \(s\in B\), we can demonstrate that \(s\) is minimal value of \(B\), and \(A\) has no maximal value of it; similarly as we did.
 </p>
 </div>
+<p>
+Thus, Dedekind's theorem is now proven by only using the Theorem 7.
+</p>
 
 <div style="text-align: right;">
 <a href="4.html" >prev</a> <a href="6.html" >next</a><br>
