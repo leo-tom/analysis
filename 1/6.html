@@ -9,7 +9,7 @@
 			margin: auto;
 		}
 		.theorem{
-			border: 1px solid black;
+			border: 2px solid black;
 			margin: 10px;	
 		}
 		.proof{
@@ -36,10 +36,85 @@ such that;
 \end{equation}
 </p>
 </div>
-	<div class="proof">
-	<div style="text-align:right;">Q.E.D.</div>
-	</div>
-
+<div class="proof">
+<p>
+It is clear that above statement is necessary : Say \(a_n \to \lambda \), from definition of convergence; we can choose certain \(n_0\) such that
+\begin{equation}
+	p > n,q>n, |a_p - \lambda| < \frac{\varepsilon}{2},|a_p - \lambda| < \frac{\varepsilon}{2} .
+\end{equation} 
+Thus \(|a_p -a_q| < \varepsilon\).
+</p>
+<p>
+What is important is sufficiency of statement. First, we can confirm that \(\{a_n\}\) is bounded. In fact, if we can chose \(\varepsilon\) 
+according to one \(n_0\); when \(p > n_0\) : 
+\begin{equation}
+	|a_{n_0 + 1} - a_p| < \varepsilon, \\
+	a_{n_0 + 1} - \varepsilon < a_p < a_{n_0 + 1} + \varepsilon .
+\end{equation}
+Thus, \(\{a_n\}\) is bounded for all \(n\) which are larger than \(n_0\). Since we choose appropriate \(n_0\), adding finite numbers \(a_1,a_2,...,a_n\) 
+to \(\{a_n\}\) keeps it bounded.
+</p>
+<p>
+Therefore, for arbitrary \(n_0\), take \(l_n,m_n\) as supremum and infimum of \(a_n,a_{n+1},...\); and let \(I_n = [l_n,m_n]\) then :
+\begin{equation}
+	m_1 \le m_2 \le ... \le m_n \le ..... \le l_n \le ... \le l_2 \le l_1 , \tag{1} \\
+	I_1 \supset I_2 \supset ... \supset I_n \supset ... \mbox{ .}
+\end{equation}
+</p>
+<p>
+From assumption, there exists \(n_0\) for all \(\varepsilon > 0\), when \(p > n_0,q > n_0\) :
+\begin{equation}
+	a_p - a_q < \varepsilon . 
+\end{equation}
+Thus, for all \(n > n_0\), from definition of supremum; \(l_n - a_q \le \varepsilon\) for arbitrary \(q \le n\). From definition of
+infimum, 
+\begin{equation}
+l_n - m_n \le \varepsilon .
+\end{equation}
+From what we discussed on nested intervals, we know that there exists \(\lambda\) such that :
+\begin{equation}
+	l_n \to \lambda , m_n \to \lambda .
+\end{equation}
+Then, it has to be
+\begin{equation}
+	a_n \to \lambda .
+\end{equation}
+In fact, because \(a_n\) belongs to \([m_n,l_n]\); for sufficiently large \(n\) : 
+\begin{equation}
+	|a_n - \lambda | \le l_n - m_n \le \varepsilon
+\end{equation}
+</p>
+<div style="text-align:right;">Q.E.D.</div>
+</div>
+<h3>Limit superior,Limit inferior</h3>
+<p>
+In the proof demonstrated above, (1) was demonstrated only using boundedness of \(\{a_n\}\).
+Monotonic sequences \(\{l_n\},\{m_n\}\) in (1) converges. Say \(\lambda,\mu\) are limits of these, then \(\lambda\) is 
+said to be limit superior(German: limes superior) of bounded sequence \(\{a_n\}\); that is denoted as 
+\(\limsup_{n\to\infty} a_n\), or \(\varlimsup_{n\to\infty} a_n\). Similarly, we call \(\mu\) limit inferior(German: limes inferior)
+ of \(\{a_n\}\); and denote it 
+\(\liminf_{n\to\infty} a_n\), or \(\varliminf_{n\to\infty} a_n\).
+As such, bounded sequences \(\{a_n\}\) would always have limit superior \(\lambda\) and limit inferior \(\mu\), and they are \(\lambda \le \mu\).
+Sequences converge if and only if they are same value : 
+\begin{equation}
+	\lim_{n \to \infty} a_n = \lambda = \mu .
+\end{equation} 
+</p>
+<p>
+<ol type="I">
+	<li>To be limit superior \(\lambda\) requires followings : </li>
+	<ol type="i">
+		<li>With \(\lambda + \varepsilon\) which is larger than \(\lambda\), \(a_n < \lambda + \varepsilon\) for sufficiently large \(n\).</li>
+		<li>With \(\lambda - \varepsilon\) which is smaller than \(\lambda\), there exist infinite number of \(n\) such that \(\lambda - \varepsilon < a_n\). </li>
+	</ol>
+</ol>
+</p>
+<p>
+In fact, from definition of \(\lambda\), \(l_n < \lambda + \varepsilon\) for sufficiently large \(n\), thus \(a_n \le l_n \le \lambda + \varepsilon\).
+That is what (i) claims. Additionally, as \(l_p\) being superior of \(a_p,a_{p+1},...\); for arbitrary \(p\) there exists \(a_n\) such that
+\(\lambda -\varepsilon \le l_p - \varepsilon < a_n,n \le p\). Because \(p\) is arbitrary chosen, infinite number of \(a_n\) exists.
+That is what (ii) claims.
+</p>
 <p style="font-size: small;">
 </p>
 
