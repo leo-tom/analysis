@@ -38,20 +38,20 @@ such that;
 </div>
 <div class="proof">
 <p>
-It is clear that above statement is necessary : Say \(a_n \to \lambda \), from definition of convergence; we can choose certain \(n_0\) such that
+It is clear that the statement above is necessary : Say \(a_n \to \lambda \), from the definition of convergence; we can choose certain \(n_0\) such that
 \begin{equation}
 	p > n,q>n, |a_p - \lambda| < \frac{\varepsilon}{2},|a_p - \lambda| < \frac{\varepsilon}{2} .
 \end{equation} 
 Thus \(|a_p -a_q| < \varepsilon\).
 </p>
 <p>
-What is important is sufficiency of statement. First, we can confirm that \(\{a_n\}\) is bounded. In fact, if we can chose \(\varepsilon\) 
+What is important is the sufficiency of statement. First, we can confirm that \(\{a_n\}\) is bounded. In fact, if we can choose \(\varepsilon\) 
 according to one \(n_0\); when \(p > n_0\) : 
 \begin{equation}
 	|a_{n_0 + 1} - a_p| < \varepsilon, \\
 	a_{n_0 + 1} - \varepsilon < a_p < a_{n_0 + 1} + \varepsilon .
 \end{equation}
-Thus, \(\{a_n\}\) is bounded for all \(n\) which are larger than \(n_0\). Since we choose appropriate \(n_0\), adding finite numbers \(a_1,a_2,...,a_n\) 
+Thus, \(\{a_n\}\) is bounded for all \(n\) which are larger than \(n_0\). Since we chose appropriate \(n_0\), adding finite numbers \(a_1,a_2,...,a_n\) 
 to \(\{a_n\}\) keeps it bounded.
 </p>
 <p>
@@ -62,7 +62,7 @@ Therefore, for arbitrary \(n_0\), take \(l_n,m_n\) as supremum and infimum of \(
 \end{equation}
 </p>
 <p>
-From assumption, there exists \(n_0\) for all \(\varepsilon > 0\), when \(p > n_0,q > n_0\) :
+From the assumption, there exists \(n_0\) for all \(\varepsilon > 0\), when \(p > n_0,q > n_0\) :
 \begin{equation}
 	a_p - a_q < \varepsilon . 
 \end{equation}
@@ -110,10 +110,23 @@ Sequences converge if and only if they are same value :
 </ol>
 </p>
 <p>
-In fact, from definition of \(\lambda\), \(l_n < \lambda + \varepsilon\) for sufficiently large \(n\), thus \(a_n \le l_n \le \lambda + \varepsilon\).
+In fact, from the definition of \(\lambda\), \(l_n < \lambda + \varepsilon\) for sufficiently large \(n\), thus \(a_n \le l_n \le \lambda + \varepsilon\).
 That is what (i) claims. Additionally, as \(l_p\) being superior of \(a_p,a_{p+1},...\); for arbitrary \(p\) there exists \(a_n\) such that
 \(\lambda -\varepsilon \le l_p - \varepsilon < a_n,n \le p\). Because \(p\) is arbitrary chosen, infinite number of \(a_n\) exists.
 That is what (ii) claims.
+</p>
+<p>
+We can describe (a) and (b) differently : 
+<ol type="I" start="2">
+	<li>There exist infinite number of \(a_n\) close to \(\lambda\). However, if we take \(\lambda' > \lambda\), there do not.</li>
+</ol>
+</p>
+<p>
+Or : 
+<ol type="I" start="3">
+	<li>There exists a partial sequence of \(\{a_n\}\) that converges to \(\lambda\), however, there is none of which converges to \(\lambda'\) which is
+		larger than \(\lambda\). We call \(\lambda\) limit superior of \(\{a_n\}\), to indicate this characteristics.</li>
+</ol>
 </p>
 <p style="font-size: small;">
 </p>
