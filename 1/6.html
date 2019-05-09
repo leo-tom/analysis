@@ -3,20 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="copyright" content="(C) Leo Tomura 2018">
-	<style type="text/css">
-		.ALL{
-			width: 60%;
-			margin: auto;
-		}
-		.theorem{
-			border: 2px solid black;
-			margin: 10px;	
-		}
-		.proof{
-			border: 1px solid black;
-			margin: 12px;		
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../stylesheet.css">
     <script type="text/javascript" async 
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
@@ -29,10 +16,10 @@
 <div class="theorem">
 <h3>Theorem 8</h3>
 <p>
-What is necessary and sufficient for sequence \(\{a_n\}\) to converge is : for all \(\varepsilon > 0\), there exists a number \(n_0\),
-such that;
+What is necessary and sufficient for sequence \(\{a_n\}\) to converge is : If for every \(\varepsilon > 0\) there exists a \(n_0\)
+such that,
 \begin{equation}
-	p > n_0, q > n_0 , |a_p - a_q| < \varepsilon .
+	p > n_0, q > n_0 \mbox{ then }|a_p - a_q| < \varepsilon .
 \end{equation}
 </p>
 </div>
@@ -104,15 +91,15 @@ Sequences converge if and only if they are same value :
 <ol type="I">
 	<li>To be limit superior \(\lambda\) requires followings : </li>
 	<ol type="i">
-		<li>With \(\lambda + \varepsilon\) which is larger than \(\lambda\), \(a_n < \lambda + \varepsilon\) for sufficiently large \(n\).</li>
-		<li>With \(\lambda - \varepsilon\) which is smaller than \(\lambda\), there exist infinite number of \(n\) such that \(\lambda - \varepsilon < a_n\). </li>
+		<li>With \(\lambda + \varepsilon\) which is greater than \(\lambda\), \(a_n < \lambda + \varepsilon\) for sufficiently large \(n\).</li>
+		<li>With \(\lambda - \varepsilon\) which is less than \(\lambda\), there exist infinite number of \(n\) such that \(\lambda - \varepsilon < a_n\). </li>
 	</ol>
 </ol>
 </p>
 <p>
 In fact, from the definition of \(\lambda\), \(l_n < \lambda + \varepsilon\) for sufficiently large \(n\), thus \(a_n \le l_n \le \lambda + \varepsilon\).
 That is what (i) claims. Additionally, as \(l_p\) being superior of \(a_p,a_{p+1},...\); for arbitrary \(p\) there exists \(a_n\) such that
-\(\lambda -\varepsilon \le l_p - \varepsilon < a_n,n \le p\). Because \(p\) is arbitrary chosen, infinite number of \(a_n\) exists.
+\(\lambda -\varepsilon \le l_p - \varepsilon < a_n,n \le p\). Because \(p\) is arbitrary chosen, infinitely many \(a_n\) exists.
 That is what (ii) claims.
 </p>
 <p>
@@ -128,9 +115,71 @@ Or :
 		larger than \(\lambda\). We call \(\lambda\) limit superior of \(\{a_n\}\), to indicate this characteristics.</li>
 </ol>
 </p>
-<p style="font-size: small;">
+<p>
+For limit inferior, you simply need to invert magnitude relationships in (a),(b),(c). 
 </p>
-
+<p>
+In practical use, it is convenient to define limit superior and limit inferior for non-bounded sequences.
+To refer it simpler, we allow use of \(+\infty , -\infty\) in (c). That are to say :
+<ul>
+	<li>\( \{a_n\} \mbox{ is not bounded from above.} \Rightarrow \varlimsup a_n = + \infty \)</li>
+	<li>\( \{a_n\} \mbox{ is not bounded from below.} \Rightarrow \varliminf a_n = - \infty \)</li>
+	<li>
+	\(\{a_n\} \mbox{ is bounded from above, but is not bounded from below.} \)
+	 \( \Rightarrow \varliminf a_n = \lambda \mbox{ if } l_n \to \lambda , \varlimsup a_n = - \infty \mbox{ if } l_n \to - \infty . \)
+	 \( \mbox{It goes same when } \{a_n\}\) is bounded from below, but is not bounded from above.
+	 </li>
+</ul>
+</p>
+<p>
+Including \(\pm \infty\), arbitrary sequence \(\{a_n\}\) has both \(\varlimsup a_n\) and \(\varliminf a_n \).
+When they are equal, \(\{a_n\}\) has its limit.
+</p>
+<p style="font-size: small;">
+Examples : 
+<ol type="1" style="font-size: small;">
+	<li>\(a_n = \frac{(-1)^n n+1}{n} \Rightarrow \varlimsup a_n = 1,\varliminf a_n = -1\)</li>
+	<li>\(a_{2n} = 1 + \frac{(-1)^n}{n} , a_{2n+1} = \frac{(-1)^n}{n} \Rightarrow \varlimsup a_n = 1,\varliminf a_n = 0.\)
+			This sequence looks like \(-1,0,\frac{1}{2},\frac{3}{2},-\frac{1}{3},\frac{2}{3},...\). There are several items which are greater than 
+			\(1\), and ones which are less than \(0\).
+	</li>
+	<li>\(a_n = (-1)^n n \Rightarrow \varlimsup a_n = + \infty,\varliminf a_n = - \infty\)</li>
+	<li>\(a_n = \cos n \alpha \mbox{(choose \(\alpha\) such that \(\pi / \alpha \) is irrational)} \Rightarrow \varlimsup a_n = 1,\varliminf a_n = -1\). 
+			It is difficult to prove it. First, take irrational \(\alpha / \pi \). Take arbitrary point \(A\)	on circumference of the unit circle. 
+			Take point \(P_n\) on circumference of the unit circle, such that length of arc \(A P_n\) is \(n \alpha\).
+	</li>
+</ol>
+</p>
+<h3>Sequence in higher dimension</h3>
+<p>
+If we take points \(P_n = (x_{1n},x_{2n},...x_{mn}) \) with natural number \(n,m\),
+sequence of points in m-dimensional space \(\{P_n\}\) can also be defined similarly as 1-dimensional sequence.
+</p>
+<p>
+Limit of \(\{P_n\}\) is a point in m-dimensional space \((a_1,a_2,...,a_m)\) such that : 
+If for every \(\varepsilon > 0\) there exists sufficiently large \(n_0\) such that, if \(n > n_0\), then \(A P_n < \varepsilon\).
+If and only if the above statement is satisfied, \(\{P_n\}\) converges to \(A\).
+</p>
+<p style="font-size: small;">
+Distance \(A P_m\) is defined as \(\sqrt{(a_1 - x_{1n})^2 + (a_2 - x_{2n})^2 + ... + (a_n - x_{mn})^2 }\). If it is less than \(\varepsilon\), 
+then \(|a - x_n| < \varepsilon , |a - x_{2n}| < \varepsilon , ... ,|a - x_{mn}| < \varepsilon\). Namely, \(AP_n < m\varepsilon\). Hence \(P_n \to A \) is equivalent to
+\begin{align}
+	\lim_{n \to \infty} x_{1n} = a_1 , \lim_{n \to \infty} x_{2n} = a_2 , ... , \lim_{n \to \infty} x_{mn} = a_m .
+\end{align}
+</p>
+<p>
+Finally, we get generalisation of Cauchy's sequence.
+<div class="theorem">
+<h3>Theorem 8</h3>
+<p>
+What is necessary and sufficient for sequence of points \(\{P_n\}\) to converge is : If for every \(\varepsilon > 0\) there exists a \(n_0\)
+such that,
+\begin{equation}
+	p > n_0, q > n_0 \mbox{ then }P_p P_q < \varepsilon .
+\end{equation}
+</p>
+</div>
+</p>
 <div style="text-align: right;">
 <a href="5.html" >prev</a> <a href="7.html" >next</a><br>
 Copyright (C) 2019 Leo Tomura
